@@ -60,8 +60,6 @@ const zucchini=[
 ]
 
 let zucchiniLength=0;
-let zucchiniWeight=0;
-
 const longZucchini=[]
 const shortZucchini=[]
 
@@ -79,12 +77,25 @@ console.log(shortZucchini)
 console.log(longZucchini)
 
 
-
-
-
-
-/* for (let index = 0; index < zucchine.length; index++) {
-    const zucchina = zucchine[index];
-    pesoTotale += zucchina.peso; 
+let shortZucchiniWeight=0;
+for (let index = 0; index < shortZucchini.length; index++) {
+    const element = shortZucchini[index];
+    shortZucchiniWeight+= element.weight
+    
 }
-console.log(pesoTotale)*/
+
+console.log(shortZucchiniWeight)
+
+let longZucchiniWeight=0;
+
+for (let index = 0; index < longZucchini.length; index++) {
+    const element = longZucchini[index];
+    longZucchiniWeight+= element.weight
+}
+
+console.log(longZucchiniWeight)
+
+
+console.log( "il peso totale delle zucchine più corte", shortZucchini, "è", shortZucchiniWeight)
+
+console.log( "il peso totale delle zucchine più lunghe", longZucchini, "è", longZucchiniWeight)

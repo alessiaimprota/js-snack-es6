@@ -5,7 +5,7 @@ Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0
 Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.*/
 
-
+//Creo un array che ha come oggetti le squadre, che hanno come proprietà nome, punti e falli. Setto su zero sia punti che falli
 const team =[
   {
     name: "Juventus",
@@ -58,14 +58,17 @@ const team =[
     foulsConceded: 0
   }
 ]
-console.log(team)
 
+//console.log(team)
+
+//Creo un array vuoto dove pushare poi nomi e falli della squadra
 teamsNewArray=[]
+//faccio una variabile sia per i punti che per i falli
 let points;
 let fouls;
  
 
-//ciclo per generare random punti e falli
+//ciclo per generare random punti e falli e pusho solo nomi e falli nell'array nuovo
 for (let index = 0; index < team.length; index++) {
   points= team[index].pointsScored = genRandomNumber(1,5)
   fouls=team[index].foulsConceded = genRandomNumber(0,5)
@@ -77,7 +80,7 @@ for (let index = 0; index < team.length; index++) {
 console.log("ecco l'array con solo nomi squadre e falli subiti", teamsNewArray)
 
 
-///////funzione random/////
+///////funzione per generare numeri random/////
 function genRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }

@@ -6,6 +6,8 @@ BONUS
  * Infine stampa separatamente quanto pesano i due gruppi di zucchine.
 */
 
+
+//genero array che contiene come oggetti le zucchine che hanno nome, peso e lunghezza
 const zucchini=[
   {
     variety: "Black Beauty",
@@ -59,10 +61,15 @@ const zucchini=[
   }
 ]
 
+
+//faccio la variabile per lavorare con la lunghezza e due array diversi dove pushare i risultati
 let zucchiniLength=0;
 const longZucchini=[]
 const shortZucchini=[]
 
+
+//ciclo dove per ogni controlliamo ogni oggetto dell'array andando però a prendere .lenght come proprietà da comparare ad un numero
+//Se zucchini[index].length>15 pusho in longZucchini altrimenti pusho in shortZucchihni
 for (let index = 0; index < zucchini.length; index++) {
     const element = zucchini[index];
     if(element.length<15){
@@ -72,18 +79,19 @@ for (let index = 0; index < zucchini.length; index++) {
         longZucchini.push(element)
     }
 }
-
+//Controllo dei due array generati
 console.log(shortZucchini)
 console.log(longZucchini)
 
-
+//Come abbiamo fatto stamattina per ogni oggetto dell'array vado a prendere solo ed esclusivamente la proprietà weight e la sommo ad ogni ciclo alla variabile shortZucchiniWeight e longZucchiniWeight
+//in modo da ottenere il peso totale dei due array separato
 let shortZucchiniWeight=0;
 for (let index = 0; index < shortZucchini.length; index++) {
     const element = shortZucchini[index];
     shortZucchiniWeight+= element.weight
     
 }
-
+//controllo
 console.log(shortZucchiniWeight)
 
 let longZucchiniWeight=0;
@@ -92,10 +100,10 @@ for (let index = 0; index < longZucchini.length; index++) {
     const element = longZucchini[index];
     longZucchiniWeight+= element.weight
 }
-
+//controllo
 console.log(longZucchiniWeight)
 
-
+//risultati finali
 console.log( "il peso totale delle zucchine più corte", shortZucchini, "è", shortZucchiniWeight)
 
 console.log( "il peso totale delle zucchine più lunghe", longZucchini, "è", longZucchiniWeight)

@@ -3,6 +3,8 @@ Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.*/
 
+
+//genero array con oggetti bici che hanno nome e peso come proprietà
 const bicycles=[
   {
     name: "Specialized Tarmac SL7",
@@ -46,8 +48,11 @@ const bicycles=[
   }
 ]
 
+//creo una variabile a cui assegnerò come valore il primo oggetto dell'array
 let leastWeighted = bicycles[0];
-
+//faccio partire il ciclo per tutta la lunghezza dell'array andremo a confrontare se bicycles[index].weight è minore della proprietà .weight della variabile leastWeighted questo comporta che 
+//se bicycles[index].weight è minore di leastWeighted.weight bicycles[index] si andrà a sostituire come valore a bicycles[0] che avevamo messo all'inizio e continuerà a sostiruirsi nel caso in
+//bicycles[index].weight è minore di leastWeighted.weight, dandomi alla fine la bici col peso minore
 for (let index = 0; index < bicycles.length; index++) {
   const element = bicycles[index];
   console.log(element)

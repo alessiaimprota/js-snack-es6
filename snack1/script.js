@@ -46,14 +46,16 @@ const bicycles=[
   }
 ]
 
-let leastWeighted = bicycles[0].weight;
+let leastWeighted = bicycles[0];
 
 for (let index = 0; index < bicycles.length; index++) {
-  const element = bicycles[index].weight;
+  const element = bicycles[index];
   console.log(element)
-  if(element<leastWeighted){
+  if(element.weight<leastWeighted.weight){
     leastWeighted=element;
   }
 }
 
-console.log(`il peso minore è ${leastWeighted}`)
+console.log(`il peso minore è ${leastWeighted.name} con il peso di ${leastWeighted.weight} kg`)
+
+console.log("la bici più leggera è", leastWeighted)

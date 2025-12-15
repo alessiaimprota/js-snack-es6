@@ -60,7 +60,7 @@ const team =[
 ]
 console.log(team)
 
-newTeamArray=[]
+teamsNewArray=[]
 let points;
 let fouls;
  
@@ -69,12 +69,12 @@ let fouls;
 for (let index = 0; index < team.length; index++) {
   points= team[index].pointsScored = genRandomNumber(1,5)
   fouls=team[index].foulsConceded = genRandomNumber(0,5)
-  newTeamArray.push({'name':team[index].name,
+  teamsNewArray.push({'name':team[index].name,
                     'foulsConceded': fouls})
 }
 
 
-console.log("ecco l'array con solo nomi squadre e falli subiti", newTeamArray)
+console.log("ecco l'array con solo nomi squadre e falli subiti", teamsNewArray)
 
 
 ///////funzione random/////

@@ -56,6 +56,6 @@ for (let index = 0; index < bicycles.length; index++) {
   }
 }
 
-console.log(`il peso minore è ${leastWeighted.name} con il peso di ${leastWeighted.weight} kg`)
+console.log(`la bici col peso minore è la ${leastWeighted.name} con il peso di ${leastWeighted.weight} kg`)
 
 console.log("la bici più leggera è", leastWeighted)
